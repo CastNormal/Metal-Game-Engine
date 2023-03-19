@@ -142,7 +142,7 @@ class Renderer : NSObject, MTKViewDelegate {
         
         for i in scene.objects {
             i.instances_uniform.removeAll()
-            print(i.instances.count)
+ 
             for j in i.instances {
                 let world_mat = MatMult(TranslationMatrix4x4(j.position), MatMult( ScaleMatrix4x4(j.scale), RotationMatrix4x4(j.rotation)))
                 

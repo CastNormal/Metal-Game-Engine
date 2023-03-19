@@ -3,7 +3,6 @@
 
 #include "Vertex.h"
 #include "Matrix.h"
-#include "Camera.h"
 
 void create_window(char const *string);
 
