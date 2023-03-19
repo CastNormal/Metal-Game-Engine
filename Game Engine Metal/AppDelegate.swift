@@ -1,27 +1,45 @@
-//
-//  AppDelegate.swift
-//  Game Engine Metal
-//
-//  Created by Sebastian Arrieta Geagea on 2022-12-26.
-//
-
 import Cocoa
+import MetalKit
 
-@main
+@_cdecl("create_window")
+func create_window(title: UnsafePointer<CChar>) {
+    let shared_application = NSApplication.shared
+    let app_delegate = AppDelegate(title: String(cString: title))
+    shared_application.delegate = app_delegate
+    shared_application.run()
+}
+
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+    var window: NSWindow!
+    var device: MTLDevice!
+    let title: String
     
-
+    init?(title: String) {
+        self.title = title
+    }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        let contentRect = NSRect(x: 0, y: 0, width: 800, height: 600)
+        window = NSWindow(
+            contentRect: contentRect,
+            styleMask: [.titled, .resizable, .miniaturizable, .closable],
+            backing: .buffered,
+            defer: false)
+        
+        window.title = title
+        
+        let controller = ViewController()
+        
+        device = MTLCreateSystemDefaultDevice()
+        window.makeKeyAndOrderFront(1)
+        window.contentViewController = controller
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
 
-    func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         return true
     }
 

@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB12495F295E709900E1CC21 /* end.png in Resources */ = {isa = PBXBuildFile; fileRef = DB12495E295E709900E1CC21 /* end.png */; };
 		DB3025DB295A491C000BEEFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3025DA295A491C000BEEFE /* AppDelegate.swift */; };
 		DB3025DD295A491C000BEEFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3025DC295A491C000BEEFE /* ViewController.swift */; };
 		DB3025DF295A491E000BEEFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB3025DE295A491E000BEEFE /* Assets.xcassets */; };
-		DB3025E2295A491E000BEEFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3025E0295A491E000BEEFE /* Main.storyboard */; };
-		DB3025ED295A491E000BEEFE /* Game_Engine_MetalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3025EC295A491E000BEEFE /* Game_Engine_MetalTests.swift */; };
-		DB3025F7295A491E000BEEFE /* Game_Engine_MetalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3025F6295A491E000BEEFE /* Game_Engine_MetalUITests.swift */; };
-		DB3025F9295A491E000BEEFE /* Game_Engine_MetalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3025F8295A491E000BEEFE /* Game_Engine_MetalUITestsLaunchTests.swift */; };
+		DB37DB2529BFB32F006CFF03 /* bunny.obj in Resources */ = {isa = PBXBuildFile; fileRef = DB37DB2429BFB32F006CFF03 /* bunny.obj */; };
+		DB47489C295B71950082D51D /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47489B295B71950082D51D /* Renderer.swift */; };
+		DB47489E295B9DDD0082D51D /* shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = DB47489D295B9DDD0082D51D /* shader.metal */; };
+		DB4748A7295BA2700082D51D /* Matrix.h in Sources */ = {isa = PBXBuildFile; fileRef = DB4748A6295BA2700082D51D /* Matrix.h */; };
+		DBA0679029625B89009BB07E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBA0678C29624E21009BB07E /* main.cpp */; };
+		DBC25E7029BFFAEA00D5E05C /* teapot.obj in Resources */ = {isa = PBXBuildFile; fileRef = DBC25E6F29BFFAEA00D5E05C /* teapot.obj */; };
+		DBC25E7229C2397400D5E05C /* board_pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC25E7129C2397400D5E05C /* board_pattern.png */; };
+		DBC25E7429C23A5600D5E05C /* board_pattern2.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC25E7329C23A5600D5E05C /* board_pattern2.png */; };
+		DBC25E7829C2856300D5E05C /* utah_teapot.obj in Resources */ = {isa = PBXBuildFile; fileRef = DBC25E7729C2856300D5E05C /* utah_teapot.obj */; };
+		DBEC970929BD44C400B1B9BC /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC970829BD44C400B1B9BC /* Object.swift */; };
+		DBEC970B29BD4E7900B1B9BC /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC970A29BD4E7900B1B9BC /* Camera.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,17 +42,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB12495E295E709900E1CC21 /* end.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = end.png; sourceTree = "<group>"; };
 		DB3025D7295A491C000BEEFE /* Game Engine Metal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game Engine Metal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3025DA295A491C000BEEFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB3025DC295A491C000BEEFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DB3025DE295A491E000BEEFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DB3025E1295A491E000BEEFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DB3025E3295A491E000BEEFE /* Game_Engine_Metal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Game_Engine_Metal.entitlements; sourceTree = "<group>"; };
 		DB3025E8295A491E000BEEFE /* Game Engine MetalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Game Engine MetalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB3025EC295A491E000BEEFE /* Game_Engine_MetalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_Engine_MetalTests.swift; sourceTree = "<group>"; };
 		DB3025F2295A491E000BEEFE /* Game Engine MetalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Game Engine MetalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB3025F6295A491E000BEEFE /* Game_Engine_MetalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_Engine_MetalUITests.swift; sourceTree = "<group>"; };
-		DB3025F8295A491E000BEEFE /* Game_Engine_MetalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_Engine_MetalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DB37DB2429BFB32F006CFF03 /* bunny.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bunny.obj; sourceTree = "<group>"; };
+		DB47489B295B71950082D51D /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		DB47489D295B9DDD0082D51D /* shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = shader.metal; sourceTree = "<group>"; };
+		DB4748A6295BA2700082D51D /* Matrix.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
+		DB4748AD295BB3F90082D51D /* Game Engine Metal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Game Engine Metal-Bridging-Header.h"; sourceTree = "<group>"; };
+		DB4748AF295E1EE40082D51D /* Vertex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = "<group>"; };
+		DBA0678C29624E21009BB07E /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		DBC25E6F29BFFAEA00D5E05C /* teapot.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = teapot.obj; sourceTree = "<group>"; };
+		DBC25E7129C2397400D5E05C /* board_pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board_pattern.png; sourceTree = "<group>"; };
+		DBC25E7329C23A5600D5E05C /* board_pattern2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board_pattern2.png; sourceTree = "<group>"; };
+		DBC25E7729C2856300D5E05C /* utah_teapot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = utah_teapot.obj; sourceTree = "<group>"; };
+		DBEC970829BD44C400B1B9BC /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		DBEC970A29BD4E7900B1B9BC /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				DB3025D9295A491C000BEEFE /* Game Engine Metal */,
-				DB3025EB295A491E000BEEFE /* Game Engine MetalTests */,
-				DB3025F5295A491E000BEEFE /* Game Engine MetalUITests */,
 				DB3025D8295A491C000BEEFE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,30 +110,41 @@
 		DB3025D9295A491C000BEEFE /* Game Engine Metal */ = {
 			isa = PBXGroup;
 			children = (
+				DBF5974D29C779D9000D14E0 /* Images */,
+				DBF5974E29C779E8000D14E0 /* Models */,
+				DBA0678C29624E21009BB07E /* main.cpp */,
+				DB47489B295B71950082D51D /* Renderer.swift */,
+				DBEC970829BD44C400B1B9BC /* Object.swift */,
 				DB3025DA295A491C000BEEFE /* AppDelegate.swift */,
+				DBEC970A29BD4E7900B1B9BC /* Camera.swift */,
+				DB4748A6295BA2700082D51D /* Matrix.h */,
+				DB47489D295B9DDD0082D51D /* shader.metal */,
+				DB4748AF295E1EE40082D51D /* Vertex.h */,
 				DB3025DC295A491C000BEEFE /* ViewController.swift */,
-				DB3025DE295A491E000BEEFE /* Assets.xcassets */,
-				DB3025E0295A491E000BEEFE /* Main.storyboard */,
-				DB3025E3295A491E000BEEFE /* Game_Engine_Metal.entitlements */,
+				DB4748AD295BB3F90082D51D /* Game Engine Metal-Bridging-Header.h */,
 			);
 			path = "Game Engine Metal";
 			sourceTree = "<group>";
 		};
-		DB3025EB295A491E000BEEFE /* Game Engine MetalTests */ = {
+		DBF5974D29C779D9000D14E0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				DB3025EC295A491E000BEEFE /* Game_Engine_MetalTests.swift */,
+				DBC25E7329C23A5600D5E05C /* board_pattern2.png */,
+				DB12495E295E709900E1CC21 /* end.png */,
+				DB3025DE295A491E000BEEFE /* Assets.xcassets */,
+				DBC25E7129C2397400D5E05C /* board_pattern.png */,
 			);
-			path = "Game Engine MetalTests";
+			path = Images;
 			sourceTree = "<group>";
 		};
-		DB3025F5295A491E000BEEFE /* Game Engine MetalUITests */ = {
+		DBF5974E29C779E8000D14E0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DB3025F6295A491E000BEEFE /* Game_Engine_MetalUITests.swift */,
-				DB3025F8295A491E000BEEFE /* Game_Engine_MetalUITestsLaunchTests.swift */,
+				DBC25E7729C2856300D5E05C /* utah_teapot.obj */,
+				DB37DB2429BFB32F006CFF03 /* bunny.obj */,
+				DBC25E6F29BFFAEA00D5E05C /* teapot.obj */,
 			);
-			path = "Game Engine MetalUITests";
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +215,7 @@
 				TargetAttributes = {
 					DB3025D6295A491C000BEEFE = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 					DB3025E7295A491E000BEEFE = {
 						CreatedOnToolsVersion = 14.2;
@@ -225,8 +252,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBC25E7829C2856300D5E05C /* utah_teapot.obj in Resources */,
 				DB3025DF295A491E000BEEFE /* Assets.xcassets in Resources */,
-				DB3025E2295A491E000BEEFE /* Main.storyboard in Resources */,
+				DB37DB2529BFB32F006CFF03 /* bunny.obj in Resources */,
+				DBC25E7429C23A5600D5E05C /* board_pattern2.png in Resources */,
+				DBC25E7229C2397400D5E05C /* board_pattern.png in Resources */,
+				DB12495F295E709900E1CC21 /* end.png in Resources */,
+				DBC25E7029BFFAEA00D5E05C /* teapot.obj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,8 +283,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBEC970B29BD4E7900B1B9BC /* Camera.swift in Sources */,
+				DB47489E295B9DDD0082D51D /* shader.metal in Sources */,
 				DB3025DD295A491C000BEEFE /* ViewController.swift in Sources */,
+				DBA0679029625B89009BB07E /* main.cpp in Sources */,
+				DB47489C295B71950082D51D /* Renderer.swift in Sources */,
 				DB3025DB295A491C000BEEFE /* AppDelegate.swift in Sources */,
+				DBEC970929BD44C400B1B9BC /* Object.swift in Sources */,
+				DB4748A7295BA2700082D51D /* Matrix.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +298,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB3025ED295A491E000BEEFE /* Game_Engine_MetalTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,8 +305,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB3025F9295A491E000BEEFE /* Game_Engine_MetalUITestsLaunchTests.swift in Sources */,
-				DB3025F7295A491E000BEEFE /* Game_Engine_MetalUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,17 +322,6 @@
 			targetProxy = DB3025F3295A491E000BEEFE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		DB3025E0295A491E000BEEFE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB3025E1295A491E000BEEFE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DB3025FA295A491E000BEEFE /* Debug */ = {
@@ -418,7 +442,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Game Engine Metal/Game_Engine_Metal.entitlements";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -426,7 +451,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSMainStoryboardFile = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -436,6 +461,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Personal.Game-Engine-Metal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Game Engine Metal/Game Engine Metal-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -445,7 +472,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Game Engine Metal/Game_Engine_Metal.entitlements";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -453,7 +481,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSMainStoryboardFile = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -463,6 +491,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Personal.Game-Engine-Metal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Game Engine Metal/Game Engine Metal-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
