@@ -6,7 +6,7 @@
 struct Vertex {
     vector_float2 texCoord;
     vector_float4 pos;
-    //vector_float3 normal;
+    vector_float3 normal;
 };
 
 #endif

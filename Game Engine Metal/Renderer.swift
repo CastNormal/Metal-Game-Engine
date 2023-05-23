@@ -1,5 +1,6 @@
 import MetalKit
 import ModelIO
+import GameController
 
 struct Light {
     var worldPosition = SIMD3<Float>(0, 0, 0)
@@ -17,6 +18,10 @@ struct FragmentUniforms {
 
 class Renderer : NSObject, MTKViewDelegate {
     
+    func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
+        
+    }
+    
     let device: MTLDevice!
     let commandQueue: MTLCommandQueue!
     let pipelineState: MTLRenderPipelineState!
@@ -33,8 +38,8 @@ class Renderer : NSObject, MTKViewDelegate {
         device = mtkView.device
         //keeps track of MTLCommandBuffers
         commandQueue = device.makeCommandQueue()
-                
-        camera = Camera(position: vector_float3(x: 0, y: 0, z: 0), orientation: vector_float3(x: 0, y: 0, z: 0), fov: 60)
+        
+        camera = Camera(position: vector_float3(x: 0, y: 1, z: 5), orientation: vector_float3(x: 0, y: 0, z: 0), fov: 60)
         
         
         
@@ -73,15 +78,15 @@ class Renderer : NSObject, MTKViewDelegate {
         var fragmentUniforms = FragmentUniforms(
             cameraWorldPosition: camera.position,
             ambientLightColor: SIMD3<Float>(0, 0, 0),
-            specularColor: SIMD3<Float>(1, 1, 1),
-            specularPower: Float(1),
-            light0: Light(worldPosition: SIMD3<Float>( 5,  5, 0), color: SIMD3<Float>(0.3, 0.3, 0.3)),
-            light1: Light(worldPosition: SIMD3<Float>(-5,  5, 0), color: SIMD3<Float>(0.3, 0.3, 0.3)),
-            light2: Light(worldPosition: SIMD3<Float>( 0,  5, 0), color: SIMD3<Float>(0.3, 0.3, 0.3)))
-    
+            specularColor: SIMD3<Float>(0.2, 0.2, 0.2),
+            specularPower: Float(0.1),
+            light0: Light(worldPosition: SIMD3<Float>( 5,  5, 0), color: SIMD3<Float>(1, 1, 1)),
+            light1: Light(worldPosition: SIMD3<Float>(-5,  5, 0), color: SIMD3<Float>(1, 1, 1)),
+            light2: Light(worldPosition: SIMD3<Float>( 0,  5, 0), color: SIMD3<Float>(1, 1, 1)))
+        
         renderEncoder.setFragmentBytes(&fragmentUniforms, length: MemoryLayout<FragmentUniforms>.size, index: 0)
         
-            //for mesh in meshes {
+        //for mesh in meshes {
         for i in scene.objects {
             let vertexBuffer = i.mesh.vertexBuffers.first!
             renderEncoder.setVertexBuffer(vertexBuffer.buffer, offset: vertexBuffer.offset, index: 0)
@@ -100,16 +105,52 @@ class Renderer : NSObject, MTKViewDelegate {
         }
         renderEncoder.endEncoding()
     }
-
+    
     func draw(in view: MTKView) {
         
         let delta = 1 / Float(view.preferredFramesPerSecond)
+        let speed: Float = 5
+        
+        for i in scene.objects {
+            
+            let instance = UnsafeMutablePointer<SIMD3<Float>>.allocate(capacity: 1)
+            instance.initialize(from: &i.instances[0].position, count: 1)
+            
+            withUnsafeMutablePointer(to: &i.rigid_body) { body in
+                update_rigid_body(body, &i.instances[0].position, delta)
+            }
+            
+            instance.deallocate()
+        }
+        
+        print(scene.objects[1].instances[0].position)
+        
+        
+        let b1 = UnsafeMutablePointer<Sphere_Rigid_Body>.allocate(capacity: 1)
+        b1.initialize(from: &scene.objects[0].rigid_body!, count: 1)
+        let b2 = UnsafeMutablePointer<Sphere_Rigid_Body>.allocate(capacity: 1)
+        b2.initialize(from: &scene.objects[1].rigid_body!, count: 1)
+        
+        sphereCollision(b1, b2)
+        
+        b1.deallocate()
+        b2.deallocate()
         
         //camera.orientation.z = time / 10
         //mesh_rotation.y += 0.5
         
-        let sx = sin(camera.orientation.x) * delta
-        let cx = cos(camera.orientation.x) * delta
+        let sx = sin(camera.orientation.x) * delta * speed
+        let cx = cos(camera.orientation.x) * delta * speed
+        
+        if (Controller.is_controller > 0) {
+            let dx = Controller.leftThumbstick_x
+            let dy = Controller.leftThumbstick_y
+            camera.position.x += sx * dy + cx * dx
+            camera.position.z += cx * dy - sx * dx
+            
+            camera.orientation.x += Controller.rightThumbstick_x / 10
+            camera.orientation.z -= Controller.rightThumbstick_y / 10
+        }
         
         for (i, e) in key_events.enumerated() {
             if e == true {
@@ -131,43 +172,41 @@ class Renderer : NSObject, MTKViewDelegate {
                 case .ArrowDown: camera.position.y -= 0.1
                 case .ArrowUp: camera.position.y += 0.1
                 case .none: break
+                default: break
                 }
             }
-        }
-        
-        let aspect_ratio = Float(view.window!.frame.height/view.window!.frame.width)
-        let proj_mat = ProjectionMatrix(0.01, 100, 60, aspect_ratio)
-        
-        let view_mat = FPSview(camera.position, camera.orientation.z, camera.orientation.x)
-        
-        for i in scene.objects {
-            i.instances_uniform.removeAll()
- 
-            for j in i.instances {
-                let world_mat = MatMult(TranslationMatrix4x4(j.position), MatMult( ScaleMatrix4x4(j.scale), RotationMatrix4x4(j.rotation)))
+            
+            
+            let aspect_ratio = Float(view.window!.frame.height/view.window!.frame.width)
+            let proj_mat = ProjectionMatrix(0.01, 100, 60, aspect_ratio)
+            
+            let view_mat = FPSview(camera.position, camera.orientation.z, camera.orientation.x)
+            
+            for i in scene.objects {
+                i.instances_uniform.removeAll()
                 
-                i.instances_uniform.append(Uniforms(worldMat: world_mat, normMat: MatrixTo3x3(world_mat).transpose.inverse))
-            }
+                for j in i.instances {
+                    let world_mat = MatMult(TranslationMatrix4x4(j.position), MatMult( ScaleMatrix4x4(j.scale), RotationMatrix4x4(j.rotation)))
+                    
+                    i.instances_uniform.append(Uniforms(worldMat: world_mat, normMat: MatrixTo3x3(world_mat).transpose.inverse))
+                }
                 
                 i.shared_uniform.projMat = proj_mat
                 i.shared_uniform.viewMat = view_mat
+            }
+            //the info to be sent to the gpu (includes the render pipeline)
+            let commandBuffer = commandQueue.makeCommandBuffer()!
+            
+            // configure interface and pipeline (not inside of pipeline)
+            guard let renderPassDescriptor = view.currentRenderPassDescriptor else { return }
+            renderPassDescriptor.colorAttachments[0].clearColor = MTLClearColorMake(0.5, 0.5, 0.5, 1)
+            
+            //prepare the vertex data and drawing commands to send to the pipeline
+            
+            render(commandBuffer: commandBuffer, renderPassDescriptor: renderPassDescriptor);
+            
+            commandBuffer.present(view.currentDrawable!)
+            commandBuffer.commit()
         }
-        //the info to be sent to the gpu (includes the render pipeline)
-        let commandBuffer = commandQueue.makeCommandBuffer()!
-        
-        // configure interface and pipeline (not inside of pipeline)
-        guard let renderPassDescriptor = view.currentRenderPassDescriptor else { return }
-        renderPassDescriptor.colorAttachments[0].clearColor = MTLClearColorMake(0.5, 0.5, 0.5, 1)
-        
-        //prepare the vertex data and drawing commands to send to the pipeline
-        
-        render(commandBuffer: commandBuffer, renderPassDescriptor: renderPassDescriptor);
-        
-        commandBuffer.present(view.currentDrawable!)
-        commandBuffer.commit()
-    }
-    
-    func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
-        
     }
 }

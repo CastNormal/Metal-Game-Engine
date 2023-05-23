@@ -3,6 +3,9 @@
 
 #include "Vertex.h"
 #include "Matrix.h"
+#include "Shapes.h"
+#include "Collision.h"
+#include "Update.h"
 
 void create_window(char const *string);
 

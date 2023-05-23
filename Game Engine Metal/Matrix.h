@@ -135,6 +135,7 @@ Matrix4x4 RotationZMatrix4x4(float angle) {
     return matrix;
 }
 
+
 Matrix4x4 RotationMatrix4x4(vector_float3 angle) {
     return MatMult(MatMult(RotationYMatrix4x4(angle.y * (PI / 180)), RotationXMatrix4x4(angle.x * (PI / 180))), RotationZMatrix4x4(angle.z * (PI / 180)));
 }

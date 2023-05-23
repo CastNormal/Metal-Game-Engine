@@ -11,4 +11,3 @@ class Camera {
         self.fov = fov
     }
 }
-

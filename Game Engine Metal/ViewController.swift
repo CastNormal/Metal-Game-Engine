@@ -1,16 +1,6 @@
 import Cocoa
 import MetalKit
-
-enum KeyboardEvents:Int {
-    case W_key
-    case A_key
-    case S_key
-    case D_key
-    case key1
-    case key2
-    case ArrowDown
-    case ArrowUp
-}
+import GameController
 
 class ViewController: NSViewController {
     var mtkView: MTKView!
@@ -25,6 +15,7 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         mtkView = self.view as? MTKView
         
@@ -76,46 +67,5 @@ class ViewController: NSViewController {
     override func performKeyEquivalent(with event: NSEvent) -> Bool {
         return true
     }
-    /*
-    override func mouseDown(with event: NSEvent) {
-        print("mouse down")
-    }*/
-    
-    
-    override func keyDown(with event: NSEvent) {
-        //print("keydown")
-        if event.keyCode == 53 { exit(0) }
-        keyEvent(keyCode: event.keyCode, event_type: true)
-    }
-    
-    override func keyUp(with event: NSEvent) {
-        //print("keyup")
-        keyEvent(keyCode: event.keyCode, event_type: false)
-    }
-    
-    func keyEvent(keyCode: UInt16, event_type: Bool) {
-        switch keyCode {
-        case 13: //w
-            renderer.key_events[0] = event_type
-        case 0: //a
-            renderer.key_events[1] = event_type
-        case 1: //s
-            renderer.key_events[2] = event_type
-        case 2: //d
-            renderer.key_events[3] = event_type
-        case 18:
-            renderer.key_events[4] = event_type
-        case 19:
-            renderer.key_events[5] = event_type
-        case 125:
-            renderer.key_events[6] = event_type
-        case 126:
-            renderer.key_events[7] = event_type
-        case 49: //space
-            break
-        default: break
-        }
-    }
-
 }
 

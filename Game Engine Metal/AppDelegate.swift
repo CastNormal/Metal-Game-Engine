@@ -19,7 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        let contentRect = NSRect(x: 0, y: 0, width: 800, height: 600)
+        let contentRect = NSRect(x: 300, y: 300, width: 800, height: 600)
         window = NSWindow(
             contentRect: contentRect,
             styleMask: [.titled, .resizable, .miniaturizable, .closable],
@@ -33,6 +33,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         device = MTLCreateSystemDefaultDevice()
         window.makeKeyAndOrderFront(1)
         window.contentViewController = controller
+        
+        //Game Controller
+        
+        //NotificationCenter.default.addObserver(self, selector: #selector(connectController), name: NSNotification.Name.GCControllerDidConnect, object: nil)
+        //NotificationCenter.default.addObserver(self, selector: #selector(disconnectController), name: NSNotification.Name.GCControllerDidDisconnect, object: nil)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

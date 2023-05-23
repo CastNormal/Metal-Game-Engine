@@ -22,16 +22,27 @@ class Scene {
     
     init(device: MTLDevice) {
         //self.add_object(device: device, texture_id: 0, file_name: "utah_teapot", pos: vector_float3(x: 10, y: 0, z: 0), rot: vector_float3(repeating: 0), scale: vector_float3(repeating: 0.03))
-        self.add_object(device: device, texture_id: 1, file_name: "teapot", pos: vector_float3(repeating: 0), rot: vector_float3(repeating: 0), scale: vector_float3(repeating: 1))
+        /*self.add_object(device: device, texture_id: 1, file_name: "wall", pos: vector_float3(repeating: 0), rot: vector_float3(repeating: 0), scale: vector_float3(repeating: 1))
+        
         
         for i in 0...4 {
-            self.objects[0].instances.append(ObjectInstance(position: vector_float3(x: Float(i), y: Float(i), z: 0), rotation: vector_float3(repeating: 0), scale: vector_float3(repeating: 1)))
+            self.objects[0].instances.append(ObjectInstance(position: vector_float3(x: Float(i) * 4, y: 0, z: 0), rotation: vector_float3(repeating: 0), scale: vector_float3(repeating: 1)))
         }
         
-        
+        */
         self.textures.append(Texture.init(device: device, file_name: "end", file_extension: "png"))
-        self.textures.append(Texture.init(device: device, file_name: "board_pattern", file_extension: "png"))
+        self.textures.append(Texture.init(device: device, file_name: "wall_texture", file_extension: "png"))
         
+        
+        self.add_object(device: device, texture_id: 0, file_name: "ico_sphere", pos: vector_float3(x: 2, y: 0, z: 0), rot: .zero, scale: vector_float3(repeating: 1))
+        
+        
+        objects[0].rigid_body = Sphere_Rigid_Body(position: objects[0].instances[0].position, angle: objects[0].instances[0].rotation, velocity: .zero, angular_velocity: .zero, inertia: 0, restitution: 0, radius: 1)
+        
+        
+        self.add_object(device: device, texture_id: 1, file_name: "ico_sphere", pos: vector_float3(x: 5, y: 0, z: 0), rot: .zero, scale: .one)
+        
+        objects[1].rigid_body = Sphere_Rigid_Body(position: objects[1].instances[0].position, angle: objects[1].instances[0].rotation, velocity: vector_float3(1, 0, 0), angular_velocity: .zero, inertia: 0, restitution: 0, radius: 1)
     }
 }
 
@@ -47,6 +58,7 @@ class Object {
     public var instances: [ObjectInstance] = []
     public var instances_uniform: [Uniforms] = []
     public var shared_uniform = sharedUniforms()
+    public var rigid_body: Sphere_Rigid_Body?
     
     func add_instance(position: vector_float3, rotation: vector_float3, scale: vector_float3) {
         instances.append(ObjectInstance(position: position, rotation: rotation, scale: scale))

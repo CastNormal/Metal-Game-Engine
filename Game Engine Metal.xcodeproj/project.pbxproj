@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB053CC929F59151000B38CD /* Collision.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB053CC829F59151000B38CD /* Collision.swift */; };
+		DB053CCD29F5A7DD000B38CD /* PWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB053CCC29F5A7DD000B38CD /* PWorld.swift */; };
 		DB12495F295E709900E1CC21 /* end.png in Resources */ = {isa = PBXBuildFile; fileRef = DB12495E295E709900E1CC21 /* end.png */; };
-		DB3025DB295A491C000BEEFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3025DA295A491C000BEEFE /* AppDelegate.swift */; };
 		DB3025DD295A491C000BEEFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3025DC295A491C000BEEFE /* ViewController.swift */; };
 		DB3025DF295A491E000BEEFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB3025DE295A491E000BEEFE /* Assets.xcassets */; };
 		DB37DB2529BFB32F006CFF03 /* bunny.obj in Resources */ = {isa = PBXBuildFile; fileRef = DB37DB2429BFB32F006CFF03 /* bunny.obj */; };
 		DB47489C295B71950082D51D /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47489B295B71950082D51D /* Renderer.swift */; };
 		DB47489E295B9DDD0082D51D /* shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = DB47489D295B9DDD0082D51D /* shader.metal */; };
 		DB4748A7295BA2700082D51D /* Matrix.h in Sources */ = {isa = PBXBuildFile; fileRef = DB4748A6295BA2700082D51D /* Matrix.h */; };
+		DB5122A12A1AE7220057444A /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5122A02A1AE7220057444A /* Controller.swift */; };
+		DB5122A32A1AE72E0057444A /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5122A22A1AE72E0057444A /* Keyboard.swift */; };
 		DBA0679029625B89009BB07E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBA0678C29624E21009BB07E /* main.cpp */; };
+		DBACD6A829C7D1CE00295C4A /* cube.obj in Resources */ = {isa = PBXBuildFile; fileRef = DBACD6A729C7CDC000295C4A /* cube.obj */; };
 		DBC25E7029BFFAEA00D5E05C /* teapot.obj in Resources */ = {isa = PBXBuildFile; fileRef = DBC25E6F29BFFAEA00D5E05C /* teapot.obj */; };
 		DBC25E7229C2397400D5E05C /* board_pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC25E7129C2397400D5E05C /* board_pattern.png */; };
 		DBC25E7429C23A5600D5E05C /* board_pattern2.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC25E7329C23A5600D5E05C /* board_pattern2.png */; };
 		DBC25E7829C2856300D5E05C /* utah_teapot.obj in Resources */ = {isa = PBXBuildFile; fileRef = DBC25E7729C2856300D5E05C /* utah_teapot.obj */; };
+		DBE4FD3B29CB7E2000E0BF46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE4FD3A29CB7E2000E0BF46 /* AppDelegate.swift */; };
+		DBE4FD3D29CB8B9700E0BF46 /* wall.obj in Resources */ = {isa = PBXBuildFile; fileRef = DBE4FD3C29CB8B9700E0BF46 /* wall.obj */; };
+		DBE4FD3F29CB8C1900E0BF46 /* wall_texture.png in Resources */ = {isa = PBXBuildFile; fileRef = DBE4FD3E29CB8C1900E0BF46 /* wall_texture.png */; };
+		DBEA4C182A1BDA3B00A7E752 /* ico_sphere.obj in Resources */ = {isa = PBXBuildFile; fileRef = DBEA4C172A1BDA3B00A7E752 /* ico_sphere.obj */; };
 		DBEC970929BD44C400B1B9BC /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC970829BD44C400B1B9BC /* Object.swift */; };
 		DBEC970B29BD4E7900B1B9BC /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC970A29BD4E7900B1B9BC /* Camera.swift */; };
 /* End PBXBuildFile section */
@@ -42,9 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB053CC829F59151000B38CD /* Collision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collision.swift; sourceTree = "<group>"; };
+		DB053CCC29F5A7DD000B38CD /* PWorld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWorld.swift; sourceTree = "<group>"; };
 		DB12495E295E709900E1CC21 /* end.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = end.png; sourceTree = "<group>"; };
 		DB3025D7295A491C000BEEFE /* Game Engine Metal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game Engine Metal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB3025DA295A491C000BEEFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB3025DC295A491C000BEEFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DB3025DE295A491E000BEEFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB3025E8295A491E000BEEFE /* Game Engine MetalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Game Engine MetalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,11 +64,21 @@
 		DB4748A6295BA2700082D51D /* Matrix.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
 		DB4748AD295BB3F90082D51D /* Game Engine Metal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Game Engine Metal-Bridging-Header.h"; sourceTree = "<group>"; };
 		DB4748AF295E1EE40082D51D /* Vertex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = "<group>"; };
+		DB5122A02A1AE7220057444A /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		DB5122A22A1AE72E0057444A /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		DBA0678C29624E21009BB07E /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		DBACD6A729C7CDC000295C4A /* cube.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = cube.obj; sourceTree = "<group>"; };
 		DBC25E6F29BFFAEA00D5E05C /* teapot.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = teapot.obj; sourceTree = "<group>"; };
 		DBC25E7129C2397400D5E05C /* board_pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board_pattern.png; sourceTree = "<group>"; };
 		DBC25E7329C23A5600D5E05C /* board_pattern2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board_pattern2.png; sourceTree = "<group>"; };
 		DBC25E7729C2856300D5E05C /* utah_teapot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = utah_teapot.obj; sourceTree = "<group>"; };
+		DBE4FD3A29CB7E2000E0BF46 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DBE4FD3C29CB8B9700E0BF46 /* wall.obj */ = {isa = PBXFileReference; lastKnownFileType = text; name = wall.obj; path = "Game Engine Metal/Models/wall.obj"; sourceTree = SOURCE_ROOT; };
+		DBE4FD3E29CB8C1900E0BF46 /* wall_texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wall_texture.png; sourceTree = "<group>"; };
+		DBEA4C162A1BCC1000A7E752 /* Shapes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; path = Shapes.h; sourceTree = "<group>"; };
+		DBEA4C172A1BDA3B00A7E752 /* ico_sphere.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ico_sphere.obj; sourceTree = "<group>"; };
+		DBEA4C1A2A1BE7FB00A7E752 /* Collision.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Collision.h; sourceTree = "<group>"; };
+		DBEA4C1B2A1BE86F00A7E752 /* Update.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Update.h; sourceTree = "<group>"; };
 		DBEC970829BD44C400B1B9BC /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		DBEC970A29BD4E7900B1B9BC /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +108,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB053CC729F59112000B38CD /* Physics */ = {
+			isa = PBXGroup;
+			children = (
+				DB053CC829F59151000B38CD /* Collision.swift */,
+				DB053CCC29F5A7DD000B38CD /* PWorld.swift */,
+				DBEA4C162A1BCC1000A7E752 /* Shapes.h */,
+				DBEA4C1A2A1BE7FB00A7E752 /* Collision.h */,
+				DBEA4C1B2A1BE86F00A7E752 /* Update.h */,
+			);
+			path = Physics;
+			sourceTree = "<group>";
+		};
 		DB3025CE295A491C000BEEFE = {
 			isa = PBXGroup;
 			children = (
@@ -110,20 +141,31 @@
 		DB3025D9295A491C000BEEFE /* Game Engine Metal */ = {
 			isa = PBXGroup;
 			children = (
+				DBEA4C192A1BE50200A7E752 /* Input */,
 				DBF5974D29C779D9000D14E0 /* Images */,
 				DBF5974E29C779E8000D14E0 /* Models */,
-				DBA0678C29624E21009BB07E /* main.cpp */,
-				DB47489B295B71950082D51D /* Renderer.swift */,
-				DBEC970829BD44C400B1B9BC /* Object.swift */,
-				DB3025DA295A491C000BEEFE /* AppDelegate.swift */,
 				DBEC970A29BD4E7900B1B9BC /* Camera.swift */,
 				DB4748A6295BA2700082D51D /* Matrix.h */,
 				DB47489D295B9DDD0082D51D /* shader.metal */,
 				DB4748AF295E1EE40082D51D /* Vertex.h */,
-				DB3025DC295A491C000BEEFE /* ViewController.swift */,
 				DB4748AD295BB3F90082D51D /* Game Engine Metal-Bridging-Header.h */,
+				DBE4FD3A29CB7E2000E0BF46 /* AppDelegate.swift */,
+				DBA0678C29624E21009BB07E /* main.cpp */,
+				DB3025DC295A491C000BEEFE /* ViewController.swift */,
+				DB47489B295B71950082D51D /* Renderer.swift */,
+				DBEC970829BD44C400B1B9BC /* Object.swift */,
+				DB053CC729F59112000B38CD /* Physics */,
 			);
 			path = "Game Engine Metal";
+			sourceTree = "<group>";
+		};
+		DBEA4C192A1BE50200A7E752 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				DB5122A22A1AE72E0057444A /* Keyboard.swift */,
+				DB5122A02A1AE7220057444A /* Controller.swift */,
+			);
+			path = Input;
 			sourceTree = "<group>";
 		};
 		DBF5974D29C779D9000D14E0 /* Images */ = {
@@ -131,6 +173,7 @@
 			children = (
 				DBC25E7329C23A5600D5E05C /* board_pattern2.png */,
 				DB12495E295E709900E1CC21 /* end.png */,
+				DBE4FD3E29CB8C1900E0BF46 /* wall_texture.png */,
 				DB3025DE295A491E000BEEFE /* Assets.xcassets */,
 				DBC25E7129C2397400D5E05C /* board_pattern.png */,
 			);
@@ -141,6 +184,9 @@
 			isa = PBXGroup;
 			children = (
 				DBC25E7729C2856300D5E05C /* utah_teapot.obj */,
+				DBACD6A729C7CDC000295C4A /* cube.obj */,
+				DBEA4C172A1BDA3B00A7E752 /* ico_sphere.obj */,
+				DBE4FD3C29CB8B9700E0BF46 /* wall.obj */,
 				DB37DB2429BFB32F006CFF03 /* bunny.obj */,
 				DBC25E6F29BFFAEA00D5E05C /* teapot.obj */,
 			);
@@ -211,7 +257,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					DB3025D6295A491C000BEEFE = {
 						CreatedOnToolsVersion = 14.2;
@@ -252,13 +298,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBACD6A829C7D1CE00295C4A /* cube.obj in Resources */,
 				DBC25E7829C2856300D5E05C /* utah_teapot.obj in Resources */,
 				DB3025DF295A491E000BEEFE /* Assets.xcassets in Resources */,
 				DB37DB2529BFB32F006CFF03 /* bunny.obj in Resources */,
 				DBC25E7429C23A5600D5E05C /* board_pattern2.png in Resources */,
 				DBC25E7229C2397400D5E05C /* board_pattern.png in Resources */,
+				DBEA4C182A1BDA3B00A7E752 /* ico_sphere.obj in Resources */,
+				DBE4FD3D29CB8B9700E0BF46 /* wall.obj in Resources */,
 				DB12495F295E709900E1CC21 /* end.png in Resources */,
 				DBC25E7029BFFAEA00D5E05C /* teapot.obj in Resources */,
+				DBE4FD3F29CB8C1900E0BF46 /* wall_texture.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,12 +333,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBE4FD3B29CB7E2000E0BF46 /* AppDelegate.swift in Sources */,
+				DB053CC929F59151000B38CD /* Collision.swift in Sources */,
+				DB5122A12A1AE7220057444A /* Controller.swift in Sources */,
 				DBEC970B29BD4E7900B1B9BC /* Camera.swift in Sources */,
+				DB5122A32A1AE72E0057444A /* Keyboard.swift in Sources */,
 				DB47489E295B9DDD0082D51D /* shader.metal in Sources */,
 				DB3025DD295A491C000BEEFE /* ViewController.swift in Sources */,
 				DBA0679029625B89009BB07E /* main.cpp in Sources */,
 				DB47489C295B71950082D51D /* Renderer.swift in Sources */,
-				DB3025DB295A491C000BEEFE /* AppDelegate.swift in Sources */,
+				DB053CCD29F5A7DD000B38CD /* PWorld.swift in Sources */,
 				DBEC970929BD44C400B1B9BC /* Object.swift in Sources */,
 				DB4748A7295BA2700082D51D /* Matrix.h in Sources */,
 			);
@@ -357,6 +411,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -417,6 +472,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -447,6 +503,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = XM48TY23KV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -477,6 +534,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = XM48TY23KV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -503,6 +561,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = XM48TY23KV;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
@@ -522,6 +581,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = XM48TY23KV;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
@@ -540,6 +600,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = XM48TY23KV;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -557,6 +618,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = XM48TY23KV;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
