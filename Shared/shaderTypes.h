@@ -3,6 +3,12 @@
 
 #include <simd/simd.h>
 
+struct Vertex {
+    vector_float2 texCoord;
+    vector_float4 pos;
+    vector_float3 normal;
+};
+
 struct sharedUniforms {
     simd_float4x4 projMat;
     simd_float4x4 viewMat;

@@ -3,21 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 73;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB053CC929F59151000B38CD /* Collision.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB053CC829F59151000B38CD /* Collision.swift */; };
-		DB053CCD29F5A7DD000B38CD /* PWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB053CCC29F5A7DD000B38CD /* PWorld.swift */; };
 		DB12495F295E709900E1CC21 /* end.png in Resources */ = {isa = PBXBuildFile; fileRef = DB12495E295E709900E1CC21 /* end.png */; };
 		DB3025DD295A491C000BEEFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3025DC295A491C000BEEFE /* ViewController.swift */; };
 		DB3025DF295A491E000BEEFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB3025DE295A491E000BEEFE /* Assets.xcassets */; };
 		DB37DB2529BFB32F006CFF03 /* bunny.obj in Resources */ = {isa = PBXBuildFile; fileRef = DB37DB2429BFB32F006CFF03 /* bunny.obj */; };
 		DB47489C295B71950082D51D /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB47489B295B71950082D51D /* Renderer.swift */; };
 		DB47489E295B9DDD0082D51D /* shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = DB47489D295B9DDD0082D51D /* shader.metal */; };
-		DB4748A7295BA2700082D51D /* Matrix.h in Sources */ = {isa = PBXBuildFile; fileRef = DB4748A6295BA2700082D51D /* Matrix.h */; };
-		DB5122A12A1AE7220057444A /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5122A02A1AE7220057444A /* Controller.swift */; };
-		DB5122A32A1AE72E0057444A /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5122A22A1AE72E0057444A /* Keyboard.swift */; };
+		DB9B632930939D1C00E7EA1B /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9B632830939D1600E7EA1B /* Matrix.swift */; };
+		DB9B632F3093BE2C00E7EA1B /* InputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9B632E3093BE2900E7EA1B /* InputManager.swift */; };
+		DB9B63313093BE7B00E7EA1B /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9B63303093BE3400E7EA1B /* InputView.swift */; };
+		DB9B63333093BEA900E7EA1B /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9B63323093BEA300E7EA1B /* CameraController.swift */; };
 		DBA0679029625B89009BB07E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBA0678C29624E21009BB07E /* main.cpp */; };
 		DBACD6A829C7D1CE00295C4A /* cube.obj in Resources */ = {isa = PBXBuildFile; fileRef = DBACD6A729C7CDC000295C4A /* cube.obj */; };
 		DBC25E7029BFFAEA00D5E05C /* teapot.obj in Resources */ = {isa = PBXBuildFile; fileRef = DBC25E6F29BFFAEA00D5E05C /* teapot.obj */; };
@@ -28,8 +27,6 @@
 		DBE4FD3D29CB8B9700E0BF46 /* wall.obj in Resources */ = {isa = PBXBuildFile; fileRef = DBE4FD3C29CB8B9700E0BF46 /* wall.obj */; };
 		DBE4FD3F29CB8C1900E0BF46 /* wall_texture.png in Resources */ = {isa = PBXBuildFile; fileRef = DBE4FD3E29CB8C1900E0BF46 /* wall_texture.png */; };
 		DBEA4C182A1BDA3B00A7E752 /* ico_sphere.obj in Resources */ = {isa = PBXBuildFile; fileRef = DBEA4C172A1BDA3B00A7E752 /* ico_sphere.obj */; };
-		DBEC970929BD44C400B1B9BC /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC970829BD44C400B1B9BC /* Object.swift */; };
-		DBEC970B29BD4E7900B1B9BC /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC970A29BD4E7900B1B9BC /* Camera.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +47,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DB053CC829F59151000B38CD /* Collision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collision.swift; sourceTree = "<group>"; };
-		DB053CCC29F5A7DD000B38CD /* PWorld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWorld.swift; sourceTree = "<group>"; };
 		DB12495E295E709900E1CC21 /* end.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = end.png; sourceTree = "<group>"; };
 		DB3025D7295A491C000BEEFE /* Game Engine Metal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game Engine Metal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3025DC295A491C000BEEFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,11 +56,11 @@
 		DB37DB2429BFB32F006CFF03 /* bunny.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bunny.obj; sourceTree = "<group>"; };
 		DB47489B295B71950082D51D /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		DB47489D295B9DDD0082D51D /* shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = shader.metal; sourceTree = "<group>"; };
-		DB4748A6295BA2700082D51D /* Matrix.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
 		DB4748AD295BB3F90082D51D /* Game Engine Metal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Game Engine Metal-Bridging-Header.h"; sourceTree = "<group>"; };
-		DB4748AF295E1EE40082D51D /* Vertex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = "<group>"; };
-		DB5122A02A1AE7220057444A /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
-		DB5122A22A1AE72E0057444A /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		DB9B632830939D1600E7EA1B /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		DB9B632E3093BE2900E7EA1B /* InputManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputManager.swift; sourceTree = "<group>"; };
+		DB9B63303093BE3400E7EA1B /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		DB9B63323093BEA300E7EA1B /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		DBA0678C29624E21009BB07E /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		DBACD6A729C7CDC000295C4A /* cube.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = cube.obj; sourceTree = "<group>"; };
 		DBC25E6F29BFFAEA00D5E05C /* teapot.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = teapot.obj; sourceTree = "<group>"; };
@@ -73,15 +68,25 @@
 		DBC25E7329C23A5600D5E05C /* board_pattern2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board_pattern2.png; sourceTree = "<group>"; };
 		DBC25E7729C2856300D5E05C /* utah_teapot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = utah_teapot.obj; sourceTree = "<group>"; };
 		DBE4FD3A29CB7E2000E0BF46 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DBE4FD3C29CB8B9700E0BF46 /* wall.obj */ = {isa = PBXFileReference; lastKnownFileType = text; name = wall.obj; path = "Game Engine Metal/Models/wall.obj"; sourceTree = SOURCE_ROOT; };
+		DBE4FD3C29CB8B9700E0BF46 /* wall.obj */ = {isa = PBXFileReference; lastKnownFileType = text; name = wall.obj; path = Resources/Models/wall.obj; sourceTree = SOURCE_ROOT; };
 		DBE4FD3E29CB8C1900E0BF46 /* wall_texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wall_texture.png; sourceTree = "<group>"; };
-		DBEA4C162A1BCC1000A7E752 /* Shapes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; path = Shapes.h; sourceTree = "<group>"; };
 		DBEA4C172A1BDA3B00A7E752 /* ico_sphere.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ico_sphere.obj; sourceTree = "<group>"; };
-		DBEA4C1A2A1BE7FB00A7E752 /* Collision.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Collision.h; sourceTree = "<group>"; };
-		DBEA4C1B2A1BE86F00A7E752 /* Update.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Update.h; sourceTree = "<group>"; };
-		DBEC970829BD44C400B1B9BC /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
-		DBEC970A29BD4E7900B1B9BC /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		DB9B632D3093A2CD00E7EA1B /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = DB3025D3295A491C000BEEFE /* Sources */;
+			membershipExceptions = (
+				shaderTypes.h,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		DB535AA9309062D000F88345 /* Scene */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Scene; sourceTree = "<group>"; };
+		DB9B632A3093A2A000E7EA1B /* Shared */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (DB9B632D3093A2CD00E7EA1B /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Shared; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DB3025D4295A491C000BEEFE /* Frameworks */ = {
@@ -108,23 +113,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DB053CC729F59112000B38CD /* Physics */ = {
-			isa = PBXGroup;
-			children = (
-				DB053CC829F59151000B38CD /* Collision.swift */,
-				DB053CCC29F5A7DD000B38CD /* PWorld.swift */,
-				DBEA4C162A1BCC1000A7E752 /* Shapes.h */,
-				DBEA4C1A2A1BE7FB00A7E752 /* Collision.h */,
-				DBEA4C1B2A1BE86F00A7E752 /* Update.h */,
-			);
-			path = Physics;
-			sourceTree = "<group>";
-		};
 		DB3025CE295A491C000BEEFE = {
 			isa = PBXGroup;
 			children = (
-				DB3025D9295A491C000BEEFE /* Game Engine Metal */,
 				DB3025D8295A491C000BEEFE /* Products */,
+				DB535AA9309062D000F88345 /* Scene */,
+				DB535AA8309062AE00F88345 /* Resources */,
+				DB3025D9295A491C000BEEFE /* App */,
+				DBF6FB972A42070300CD8180 /* Rendering */,
+				DBEA4C192A1BE50200A7E752 /* Input */,
+				DB535AB03090662A00F88345 /* Math */,
+				DB9B632A3093A2A000E7EA1B /* Shared */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,32 +137,40 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DB3025D9295A491C000BEEFE /* Game Engine Metal */ = {
+		DB3025D9295A491C000BEEFE /* App */ = {
 			isa = PBXGroup;
 			children = (
-				DBEA4C192A1BE50200A7E752 /* Input */,
-				DBF5974D29C779D9000D14E0 /* Images */,
-				DBF5974E29C779E8000D14E0 /* Models */,
-				DBEC970A29BD4E7900B1B9BC /* Camera.swift */,
-				DB4748A6295BA2700082D51D /* Matrix.h */,
-				DB47489D295B9DDD0082D51D /* shader.metal */,
-				DB4748AF295E1EE40082D51D /* Vertex.h */,
-				DB4748AD295BB3F90082D51D /* Game Engine Metal-Bridging-Header.h */,
 				DBE4FD3A29CB7E2000E0BF46 /* AppDelegate.swift */,
-				DBA0678C29624E21009BB07E /* main.cpp */,
 				DB3025DC295A491C000BEEFE /* ViewController.swift */,
-				DB47489B295B71950082D51D /* Renderer.swift */,
-				DBEC970829BD44C400B1B9BC /* Object.swift */,
-				DB053CC729F59112000B38CD /* Physics */,
+				DB4748AD295BB3F90082D51D /* Game Engine Metal-Bridging-Header.h */,
+				DBA0678C29624E21009BB07E /* main.cpp */,
 			);
-			path = "Game Engine Metal";
+			path = App;
+			sourceTree = "<group>";
+		};
+		DB535AA8309062AE00F88345 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DBF5974E29C779E8000D14E0 /* Models */,
+				DBF5974D29C779D9000D14E0 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DB535AB03090662A00F88345 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				DB9B632830939D1600E7EA1B /* Matrix.swift */,
+			);
+			path = Math;
 			sourceTree = "<group>";
 		};
 		DBEA4C192A1BE50200A7E752 /* Input */ = {
 			isa = PBXGroup;
 			children = (
-				DB5122A22A1AE72E0057444A /* Keyboard.swift */,
-				DB5122A02A1AE7220057444A /* Controller.swift */,
+				DB9B632E3093BE2900E7EA1B /* InputManager.swift */,
+				DB9B63303093BE3400E7EA1B /* InputView.swift */,
+				DB9B63323093BEA300E7EA1B /* CameraController.swift */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -172,9 +179,9 @@
 			isa = PBXGroup;
 			children = (
 				DBC25E7329C23A5600D5E05C /* board_pattern2.png */,
+				DB3025DE295A491E000BEEFE /* Assets.xcassets */,
 				DB12495E295E709900E1CC21 /* end.png */,
 				DBE4FD3E29CB8C1900E0BF46 /* wall_texture.png */,
-				DB3025DE295A491E000BEEFE /* Assets.xcassets */,
 				DBC25E7129C2397400D5E05C /* board_pattern.png */,
 			);
 			path = Images;
@@ -193,6 +200,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		DBF6FB972A42070300CD8180 /* Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				DB47489D295B9DDD0082D51D /* shader.metal */,
+				DB47489B295B71950082D51D /* Renderer.swift */,
+			);
+			path = Rendering;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -207,6 +223,10 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DB535AA9309062D000F88345 /* Scene */,
+				DB9B632A3093A2A000E7EA1B /* Shared */,
 			);
 			name = "Game Engine Metal";
 			productName = "Game Engine Metal";
@@ -257,7 +277,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 2710;
 				TargetAttributes = {
 					DB3025D6295A491C000BEEFE = {
 						CreatedOnToolsVersion = 14.2;
@@ -274,7 +294,6 @@
 				};
 			};
 			buildConfigurationList = DB3025D2295A491C000BEEFE /* Build configuration list for PBXProject "Game Engine Metal" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -282,6 +301,7 @@
 				Base,
 			);
 			mainGroup = DB3025CE295A491C000BEEFE;
+			preferredProjectObjectVersion = 56;
 			productRefGroup = DB3025D8295A491C000BEEFE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -334,17 +354,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBE4FD3B29CB7E2000E0BF46 /* AppDelegate.swift in Sources */,
-				DB053CC929F59151000B38CD /* Collision.swift in Sources */,
-				DB5122A12A1AE7220057444A /* Controller.swift in Sources */,
-				DBEC970B29BD4E7900B1B9BC /* Camera.swift in Sources */,
-				DB5122A32A1AE72E0057444A /* Keyboard.swift in Sources */,
+				DB9B63313093BE7B00E7EA1B /* InputView.swift in Sources */,
+				DB9B632F3093BE2C00E7EA1B /* InputManager.swift in Sources */,
 				DB47489E295B9DDD0082D51D /* shader.metal in Sources */,
+				DB9B63333093BEA900E7EA1B /* CameraController.swift in Sources */,
 				DB3025DD295A491C000BEEFE /* ViewController.swift in Sources */,
+				DB9B632930939D1C00E7EA1B /* Matrix.swift in Sources */,
 				DBA0679029625B89009BB07E /* main.cpp in Sources */,
 				DB47489C295B71950082D51D /* Renderer.swift in Sources */,
-				DB053CCD29F5A7DD000B38CD /* PWorld.swift in Sources */,
-				DBEC970929BD44C400B1B9BC /* Object.swift in Sources */,
-				DB4748A7295BA2700082D51D /* Matrix.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,8 +430,10 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = XM48TY23KV;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -434,6 +453,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -474,8 +494,10 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = XM48TY23KV;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -488,6 +510,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
@@ -500,11 +523,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = XM48TY23KV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -514,11 +537,12 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Personal.Game-Engine-Metal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Game Engine Metal/Game Engine Metal-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/App/Game Engine Metal-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -531,11 +555,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = XM48TY23KV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -545,11 +569,12 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Personal.Game-Engine-Metal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Game Engine Metal/Game Engine Metal-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/App/Game Engine Metal-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -557,14 +582,12 @@
 		DB302600295A491E000BEEFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = XM48TY23KV;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Personal.Game-Engine-MetalTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -577,14 +600,12 @@
 		DB302601295A491E000BEEFE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = XM48TY23KV;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Personal.Game-Engine-MetalTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -597,12 +618,11 @@
 		DB302603295A491E000BEEFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = XM48TY23KV;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Personal.Game-Engine-MetalUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -615,12 +635,11 @@
 		DB302604295A491E000BEEFE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = XM48TY23KV;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Personal.Game-Engine-MetalUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
